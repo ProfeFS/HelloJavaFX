@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCombination;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -39,6 +40,8 @@ public class Main extends Application {
 		text.setText("SOY UN NODO HIJO");
 		text.setX(50);
 		text.setY(50);
+		text.setFont(Font.font("Arial", 30));
+		text.setFill(Color.BLACK);
 		root.getChildren().add(text);
 		
 //		stage.setFullScreen(true);
