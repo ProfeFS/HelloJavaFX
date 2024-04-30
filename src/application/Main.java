@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.input.KeyCombination;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -43,6 +44,10 @@ public class Main extends Application {
 		text.setFont(Font.font("Arial", 30));
 		text.setFill(Color.BLACK);
 		root.getChildren().add(text);
+		
+		Button boton = new Button();
+		boton.setText("PRESS");
+		root.getChildren().add(boton);
 		
 //		stage.setFullScreen(true);
 //		stage.setFullScreenExitHint("PULSE q PARA SALIR");
