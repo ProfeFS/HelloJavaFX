@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCombination;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class Main extends Application {
@@ -25,18 +26,27 @@ public class Main extends Application {
 	public void start(Stage stage) throws Exception {
 		System.out.println("soy start");
 
-		Group root = new Group();
+		Group root = new Group();		
 		Scene scene = new Scene(root, Color.ALICEBLUE);
+
+		
 		stage.setTitle("Hello FX");
 		stage.setHeight(400);
 		stage.setWidth(400);
 		stage.setResizable(false);
-		stage.setFullScreen(true);
-		stage.setFullScreenExitHint("PULSE q PARA SALIR");
-		stage.setFullScreenExitKeyCombination(KeyCombination.valueOf("q"));
+		
+		Text text = new Text();
+		text.setText("SOY UN NODO HIJO");
+		text.setX(50);
+		text.setY(50);
+		root.getChildren().add(text);
+		
+//		stage.setFullScreen(true);
+//		stage.setFullScreenExitHint("PULSE q PARA SALIR");
+//		stage.setFullScreenExitKeyCombination(KeyCombination.valueOf("q"));
+				
 		
 		stage.setScene(scene);
-
 		stage.show();
 
 	}
